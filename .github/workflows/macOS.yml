@@ -10,6 +10,7 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+    - uses: rokibhasansagar/slimhub_actions@mac
     - name: SSH Keepalive Hack
       run: |
         mkdir -p ~/.ssh
