@@ -4,6 +4,18 @@ on:
   workflow_dispatch:
 
 jobs:
+
+  Ubuntu SSH:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: fastai/workflows/ssh@master
+      with:
+        ssh_key: ${{ secrets.SSH_KEY }}
+        key_file: id_ecdsa
+    - uses: actions/checkout@v2
+    - uses: rokibhasansagar/slimhub_actions@main
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@master
   ssh:
     runs-on: macos-10.15
 
