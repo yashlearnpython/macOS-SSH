@@ -5,7 +5,7 @@ on:
 
 jobs:
 
-  Ubuntu SSH:
+  Ubuntu-SSH:
     runs-on: ubuntu-latest
     steps:
     - uses: fastai/workflows/ssh@master
